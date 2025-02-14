@@ -116,6 +116,12 @@ target.addEventListener('mouseover', () => {
     }
 });
 
+target.addEventListener('click', () => {
+    if (!isPaused && !isGameOver) {
+        updateScore();
+    }
+});
+
 resetBtn.addEventListener('click', startGame);
 pauseBtn.addEventListener('click', () => {
     isPaused = !isPaused;
